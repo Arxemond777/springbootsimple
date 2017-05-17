@@ -1,18 +1,20 @@
-Launch
-Edit Configuration -> + -> Spring Boot
-В конфигах MainClass:com.net.spring.SpringApplicationSimple
+Launch<br>
+Edit Configuration -> + -> Spring Boot<br>
+В конфигах MainClass:com.net.spring.SpringApplicationSimple<br>
 
-Routes
-hosts:port/testDeploySpring/
+Routes<br>
+hosts:port/testDeploySpring/<br>
+hosts:port/test_queue/ - When the application starts Producer send 2 message. Visited route /test_queue/ give 1 message<br>
+in queue<br>
 
-Deploy
-mvn clean install
+Deploy<br>
+mvn clean install<br>
 
-Location
-/var/lib/tomcat/webapps/
+Location<br>
+/var/lib/tomcat/webapps/<br>
 
----------------------------------------------------------------------
-*) sudo vi /opt/apache-tomcat-9.0.0.M21/conf/tomcat-users.xml
+---------------------------------------------------------------------<br>
+*) sudo vi /opt/apache-tomcat-9.0.0.M21/conf/tomcat-users.xml<br>
 
 <tomcat-users xmlns="http://tomcat.apache.org/xml"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -20,9 +22,16 @@ Location
               version="1.0">
         <user username="*" password="*" roles="manager-gui,admin-gui"/>
 
-*) sudo systemctl restart tomcat
+*) sudo systemctl restart tomcat<br>
 
-*) sudo tail -n 50 /opt/tomcat-latest/logs/catalina.out
+*) sudo tail -n 50 /opt/tomcat-latest/logs/catalina.out<br>
 
-*) change port
-sudo vi /opt/tomcat-latest/conf/server.xml
+*) change port<br>
+sudo vi /opt/tomcat-latest/conf/server.xml<br>
+
+
+*) arxemond 
+
+/var/lib/tomcat/webaaps
+/etc/tomcat
+

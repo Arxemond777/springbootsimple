@@ -15,7 +15,7 @@ public class BookController
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String hello() {
         System.out.println("in controller");
-        return "testDeploySpring. Date:" + new Date();
+        return "testDeploySpring. Date: " + new Date();
     }
 
 }
