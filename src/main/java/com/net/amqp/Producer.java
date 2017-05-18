@@ -29,8 +29,9 @@ public class Producer implements CommandLineRunner
 
         System.out.println("Sending message...");
 
-        rabbitTemplate.convertAndSend(SpringApplicationSimple.queueName, "Hello from RabbitMQ!"); // Отправка при инициализации
-        rabbitTemplate.convertAndSend(SpringApplicationSimple.queueName, "Hello from RabbitMQ!");
+        for (int i = 0; i < 2; i++) { // Лол, деплоил на томкат. И он часть выгребал:)
+            rabbitTemplate.convertAndSend(SpringApplicationSimple.queueName, "Hello from RabbitMQ" + i + "!");
+        }
 
         consumer.getLatch().await(10000, TimeUnit.MILLISECONDS);
         //context.close(); // Выход из контекста, после выполнения или timeout CountDownLatch

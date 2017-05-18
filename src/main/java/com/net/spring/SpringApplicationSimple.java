@@ -63,9 +63,9 @@ public class SpringApplicationSimple extends SpringBootServletInitializer
     }
 
     @Bean
-    MessageListenerAdapter listenerAdapter(Consumer receiver) { // Обрабатывает сообщения в очереди queueName. Зарегистрирован в SpringApplicationSimple.container
+    MessageListenerAdapter listenerAdapter(Consumer consumer) { // Обрабатывает сообщения в очереди queueName. Зарегистрирован в SpringApplicationSimple.container
 
-        return new MessageListenerAdapter(receiver, "receiveMessage");
+        return new MessageListenerAdapter(consumer, "receiveMessage");
 
     }
 

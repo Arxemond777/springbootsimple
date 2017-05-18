@@ -3,9 +3,10 @@ Edit Configuration -> + -> Spring Boot<br>
 В конфигах MainClass:com.net.spring.SpringApplicationSimple<br>
 
 Routes<br>
-hosts:port/testDeploySpring/<br>
-hosts:port/test_queue/ - When the application starts Producer send 2 message. Visited route /test_queue/ give 1 message<br>
+- hosts:port/testDeploySpring/<br>
+- hosts:port/test_queue/ - When the application starts Producer send 2 message. Visited route /test_queue/ give 1 message<br>
 in queue<br>
+- hosts:port/read_write_contents?foo=some_value - взятие с example.ru контента и запись в tmp<br>
 
 Deploy<br>
 mvn clean install<br>
